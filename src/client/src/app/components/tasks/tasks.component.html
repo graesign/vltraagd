@@ -1,5 +1,6 @@
 <div class="card m-3">
   <div class="card-body">
+    <div class="btn btn-danger" (click)="addUser()">addUser</div>
     <form (submit)="addTask($event)">
       <div class="input-group">
           <input type="text" [(ngModel)]="title" name="title" class="form-control" placeholder="Add A Task">

@@ -1,8 +1,8 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import {Injectable} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
 import 'rxjs/add/operator/map';
 
-import { Task } from '../Task' ;
+import {Task} from '../Task' ;
 
 @Injectable()
 export class TaskService {
@@ -11,12 +11,12 @@ export class TaskService {
 
   constructor(private http: HttpClient) {
   }
-  
+
   getTasks() {
     return this.http.get<Task[]>(`${this.domain}/api/tasks`)
       .map(res => res);
   }
- 
+
   addTask(newTask: Task) {
     return this.http.post<Task>(`${this.domain}/api/tasks`, newTask)
       .map(res => res);
@@ -31,4 +31,7 @@ export class TaskService {
     return this.http.put<Task>(`${this.domain}/api/tasks/${newTask._id}`, newTask)
       .map(res => res)
   }
+
+
+
 }

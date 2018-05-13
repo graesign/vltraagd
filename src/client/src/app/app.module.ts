@@ -6,12 +6,14 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { TasksComponent } from './components/tasks/tasks.component';
+import { UsersComponent } from './users/users.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TasksComponent
+    TasksComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
